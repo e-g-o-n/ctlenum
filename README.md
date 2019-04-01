@@ -3,10 +3,12 @@ Enumeration of Certificate Transparency Logs
 
 Requirements:
   pip install requests
+  
   pip install argparse
 
 API_Key for certspotter:
   Register an account with sslmate.com (certspotter)
+  
   Grab API Key from:
   https://sslmate.com/account/api_credentials
 
