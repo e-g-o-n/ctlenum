@@ -18,7 +18,9 @@ python ctlenum.py --target targetdomain
 
 Arguments:
  --target sets target domain
+ 
  -e exclusive subdomain for target domain
+ 
  -nw no wildcard returned subdomains, example *.google.com
 
 example:
