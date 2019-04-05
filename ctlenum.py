@@ -4,7 +4,10 @@ import config
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--target', help="target for scan. example: --target google.com", required=True)
-parser.add_argument('-nw', action='store_true', help="target for scan. example: --target google.com")
+parser.add_argument('-nw', action='store_true', help="no wildcards.  example: ignores *.google.com")
+parser.add_argument('-e', action='store_true', help="exclusive output. example: if target is google.com,"
+                                                    " only show google.com domains")
+
 
 args = parser.parse_args()
 
@@ -47,5 +50,12 @@ class CtlEnum(object):
 
 scan = CtlEnum(config.api_key, target, args.nw)
 
-for dnsentry in scan.get_dns():
-    print(dnsentry)
+if __name__ == '__main__':
+    if args.e is True:
+        for dnsentry in scan.get_dns():
+            if target in dnsentry:
+                print(dnsentry)
+    else:
+        for dnsentry in scan.get_dns():
+            print(dnsentry)
+ 
