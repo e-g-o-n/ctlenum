@@ -16,6 +16,11 @@ edit 'config.py' and place your API key in the config file
 
 python ctlenum.py --target targetdomain
 
+Arguments:
+ --target sets target domain
+ -e exclusive subdomain for target domain
+ -nw no wildcard returned subdomains, example *.google.com
+
 example:
    python ctlenum.py --target google.com
    
