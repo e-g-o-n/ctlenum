@@ -24,23 +24,23 @@ class CtlEnum(object):
         print('Target Domain: ', str(self.domain))
 
     def get_dns(self):
-        url = 'https://api.certspotter.com/v1/issuances?domain=' + self.domain + \
-              '&include_subdomains=true&match_wildcards=true&expand=dns_names'
+        url = ['https://api.certspotter.com/v1/issuances?domain=', self.domain,\
+              '&include_subdomains=true&match_wildcards=true&expand=dns_names']
         header = {'Authorization': 'Bearer ' + self.api}
-        r = requests.get(url, headers=header).json()
+        r = requests.get(''.join(url), headers=header).json()
         dns_list = list()
 
         for item in r:
             list_count = len(item['dns_names'])
             if list_count > 1:
                 for entry in item['dns_names']:
-                    if self.nowilds is True and entry[0][:1] is '*':
+                    if self.nowilds is True and entry[0][:1] == '*':
                         pass
                     else:
                         dns_list.append(str(entry))
             else:
                 str_item = str(item['dns_names'][0])
-                if self.nowilds is True and str_item[0][:1] is '*':
+                if self.nowilds is True and str_item[0][:1] == '*':
                     pass
                 else:
                     dns_list.append(str_item)
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     else:
         for dnsentry in scan.get_dns():
             print(dnsentry)
- 
+
