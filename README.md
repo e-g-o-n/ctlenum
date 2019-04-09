@@ -14,6 +14,7 @@ Enumeration of Certificate Transparency Logs
 
 **Basic Use:**
 If outputting results to a list, for use with nmap and/or other scanning tools, ideal usage will be with no arguments.
+
 ```python ctlenum.py --target targetdomain```
 
 **Arguments:**
