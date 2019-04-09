@@ -2,9 +2,9 @@
 Enumeration of Certificate Transparency Logs
 
 **Requirements:**
-  pip install requests
+  ```pip install requests```
   
-  pip install argparse
+ ```pip install argparse```
 
 **API_Key for certspotter:**
   Register an account with sslmate.com (certspotter)
@@ -14,7 +14,7 @@ Enumeration of Certificate Transparency Logs
 
 edit 'config.py' and place your API key in the config file
 
-python ctlenum.py --target targetdomain
+```python ctlenum.py --target targetdomain```
 
 **Arguments:**
  --target sets target domain
@@ -24,5 +24,5 @@ python ctlenum.py --target targetdomain
  -nw no wildcard returned subdomains, example *.google.com
 
 **example:**
-   python ctlenum.py --target google.com
+   ```python ctlenum.py --target google.com```
    
