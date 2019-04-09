@@ -22,6 +22,6 @@ Enumeration of Certificate Transparency Logs
  -e exclusive subdomain for target domain
  -nw no wildcard returned subdomains, example *.google.com
 
-**example:**
+**Example w/ Arguments:**
    ```python ctlenum.py -e -nw --target google.com```
    
