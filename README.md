@@ -22,7 +22,10 @@ Enumeration of Certificate Transparency Logs
  
  -a include ALL non-target domains in output
  
- -w include wildcard subdomains in output. Example: \*.example.com
+ -w include wildcard subdomains in output. 
+  - Example: '''python ctlenum --target google.com'''
+      '''\*.google.com'''
+      '''example.com'''
 
 **Example w/ Arguments:**
 
