@@ -2,9 +2,10 @@
 Enumeration of Certificate Transparency Logs
 
 **Requirements:**
-  ```pip install requests```
+
+```pip install requests```
   
- ```pip install argparse```
+```pip install argparse```
 
 **API_Key for certspotter:**
   - Register an account with sslmate.com (certspotter)
