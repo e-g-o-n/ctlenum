@@ -9,7 +9,7 @@ Enumeration of Certificate Transparency Logs
     - Register an account with sslmate.com (certspotter)
     - Grab API Key from: https://sslmate.com/account/api_credentials
 
-**Before using:*
+**Before using:**
   - edit 'config.py' and place your API key in the config file
   - example: ```API_KEY = "legitimate_key"```
 
