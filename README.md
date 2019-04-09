@@ -13,6 +13,7 @@ Enumeration of Certificate Transparency Logs
   - example: ```API_KEY = "legitimate_key"```
 
 **Basic Use:**
+
 ```python ctlenum.py --target targetdomain```
 
 **Arguments:**
