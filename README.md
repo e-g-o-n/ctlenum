@@ -19,7 +19,9 @@ Enumeration of Certificate Transparency Logs
 **Arguments:**
 
  --target sets target domain
+ 
  -e exclusive subdomain for target domain
+ 
  -nw no wildcard returned subdomains, example *.google.com
 
 **Example w/ Arguments:**
