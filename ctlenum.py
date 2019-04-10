@@ -39,16 +39,20 @@ class CtlEnum(object):
 
 
 def main(targ=None, apikey=None, wildcards=None, showall=None):
+    # Default values. Shouldn't be able to NOT have an apikey here but just in case.
     if apikey is None:
         apikey = config.api_key
 
+    # No target = Let's just stop right now
     if targ is None:
         print("[-] no target given, exiting early and no soup for you")
         return
 
+    # Default is don't show wildcard domains
     if wildcards is None:
         wildcards = False
 
+    # Default is don't show other domains
     if showall is None:
         showall = False
 
@@ -68,6 +72,7 @@ def main(targ=None, apikey=None, wildcards=None, showall=None):
 
 
 if __name__ == '__main__':
+    # Only parse args if we are running in standalone mode
     parser = argparse.ArgumentParser()
     parser.add_argument('--target', help="target for scan. example: --target google.com", required=True)
     parser.add_argument('-w', action='store_true', help="Wildcards.  Shows wildcard subdomains like: *.google.com")
@@ -79,6 +84,7 @@ if __name__ == '__main__':
     w = args.w
     a = args.a
     key = config.api_key
+    # Save the returned list of entries and then print em out to the screen
     all_the_entries = main(target, key, w, a)
     for each_entry in all_the_entries:
         print each_entry
